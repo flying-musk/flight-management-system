@@ -22,11 +22,36 @@ export default {
   data() {
     return {
       display: '',
+      signState: '',
     };
+  },
+  watch: {
+    signState(newValue, oldValue) {
+      if (newValue === '') {
+        return;
+      }
+      if (oldValue !== '') {
+        this.display = this.display.substring(0, this.display.length - 1);
+      }
+      this.display += newValue;
+    },
   },
   methods: {
     buttonClick(button) {
-      this.display += button;
+      if (button === '+/-') {
+        this.signState = this.signState === '+' ? '-' : '+';
+      } else {
+        this.signState = '';
+        if (button === 'SP') {
+          this.display += ' ';
+        } else if (button === 'DEL') {
+          this.display = this.display.substring(0, this.display.length - 1);
+        } else if (button === 'CLR') {
+          this.display = '';
+        } else {
+          this.display += button;
+        }
+      }
     },
   },
 };
