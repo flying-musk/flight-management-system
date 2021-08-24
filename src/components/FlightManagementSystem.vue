@@ -3,7 +3,7 @@
     <h1>Flight Management System</h1>
     <div class="f-main">
       <Display :display="display" />
-      <Buttons />
+      <Buttons @buttonClick="buttonClick" />
     </div>
   </div>
 </template>
@@ -22,6 +22,11 @@ export default {
       display: '',
     };
   },
+  methods: {
+    buttonClick(button) {
+      this.display += button;
+    },
+  },
 };
 </script>
 
@@ -29,9 +34,9 @@ export default {
 .f-main {
   background-color: #d8c6ae;
   max-width: 560px;
-  padding: 8px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 </style>

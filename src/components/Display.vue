@@ -28,7 +28,7 @@ export default {
   border: none;
   background-color: #222222;
   color: #ffffff;
-  padding: 8px;
+  padding: 16px;
   font-family: Consolas, monaco, monospace;
   display: flex;
   align-items: center;
