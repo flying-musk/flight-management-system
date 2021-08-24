@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>Flight Management System</h1>
-    <div class="f-main">
-      <Display :display="display" />
-      <Buttons @buttonClick="buttonClick" />
+    <div class="f-outer">
+      <div class="f-main">
+        <Display :display="display" />
+        <Buttons @buttonClick="buttonClick" />
+      </div>
     </div>
   </div>
 </template>
@@ -31,6 +33,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.f-outer {
+  min-height: 64vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .f-main {
   background-color: #d8c6ae;
   max-width: 560px;

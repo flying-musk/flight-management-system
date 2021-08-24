@@ -37,6 +37,7 @@ export default {
   color: #36f036;
 }
 .d-input {
+  width: 0;
   flex-grow: 1;
   border: none;
   background-color: #222222;

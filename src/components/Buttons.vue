@@ -16,7 +16,7 @@
         v-for="c in charZone"
         :key="c"
         :data-button="c"
-        class="b-button button-char"
+        class="b-button"
         @click="buttonClick"
       >
         {{ c }}
@@ -80,6 +80,10 @@ export default {
 .button-number {
   border-radius: 50%;
 }
-.button-char {
+@media (max-width: 420px) {
+  .b-outer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 </style>
