@@ -25,7 +25,6 @@ export default {
 
 <style scoped lang="scss">
 .d-outer {
-  border: none;
   background-color: #222222;
   color: #ffffff;
   padding: 16px;

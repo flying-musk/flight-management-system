@@ -3,6 +3,7 @@
     <h1>Flight Management System</h1>
     <div class="f-outer">
       <div class="f-main">
+        <Random :newRandomStringFlag="newRandomStringFlag" />
         <Display :display="display" />
         <Buttons @buttonClick="buttonClick" />
       </div>
@@ -11,16 +12,19 @@
 </template>
 
 <script>
+import Random from './Random.vue';
 import Display from './Display.vue';
 import Buttons from './Buttons.vue';
 export default {
   name: 'flight-management-system',
   components: {
+    Random,
     Display,
     Buttons,
   },
   data() {
     return {
+      newRandomStringFlag: 0,
       display: '',
       signState: '',
     };
@@ -48,6 +52,7 @@ export default {
           this.display = this.display.substring(0, this.display.length - 1);
         } else if (button === 'CLR') {
           this.display = '';
+          this.newRandomStringFlag += 1;
         } else {
           this.display += button;
         }
