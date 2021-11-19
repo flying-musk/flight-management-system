@@ -69,10 +69,11 @@ export default {
 }
 .b-button {
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   background-color: #222222;
   color: #ffffff;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +81,7 @@ export default {
 .button-number {
   border-radius: 50%;
 }
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .b-outer {
     flex-direction: column-reverse;
     align-items: center;
