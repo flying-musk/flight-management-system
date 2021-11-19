@@ -72,9 +72,9 @@ export default {
 .f-main {
   background-color: #d8c6ae;
   max-width: 560px;
-  padding: 16px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 </style>

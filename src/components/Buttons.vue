@@ -53,24 +53,24 @@ export default {
 .b-outer {
   display: flex;
   align-items: flex-end;
-  gap: 16px;
+  gap: 12px;
 }
 .b-numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 16px;
-  row-gap: 16px;
+  column-gap: 12px;
+  row-gap: 12px;
 }
 .b-chars {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 16px;
-  row-gap: 16px;
+  column-gap: 12px;
+  row-gap: 12px;
 }
 .b-button {
   cursor: pointer;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   background-color: #222222;
   color: #ffffff;
   font-size: 20px;
@@ -81,7 +81,7 @@ export default {
 .button-number {
   border-radius: 50%;
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .b-outer {
     flex-direction: column-reverse;
     align-items: center;
